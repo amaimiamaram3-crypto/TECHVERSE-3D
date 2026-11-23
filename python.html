@@ -1,0 +1,375 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Académie Python | IT WORLD 3D</title>
+
+    <link rel="stylesheet" href="python.css">
+
+    <!-- THREE JS -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="topbar">
+
+        <a href="index.html" class="logo">
+            IT <span>WORLD</span> 3D
+        </a>
+
+        <div class="top-actions">
+
+            <a href="index.html" class="back-link">
+                ← Accueil
+            </a>
+
+            <span class="level-badge">
+                NIVEAU 01 · DÉBUTANT
+            </span>
+
+            <span class="python-badge">
+                🐍 PYTHON
+            </span>
+
+        </div>
+
+    </header>
+
+
+    <main class="main-layout">
+
+        <!-- MENU GAUCHE -->
+
+        <aside class="sidebar">
+
+            <div class="welcome">
+
+                <span class="small-label">
+                    BIENVENUE À
+                </span>
+
+                <h1>
+                    Académie<br><span>Python</span>
+                </h1>
+
+                <p>
+                    Apprenez Python depuis zéro grâce à un univers 3D interactif.
+                </p>
+
+            </div>
+
+
+            <!-- PROGRESSION -->
+
+            <div class="progress-card">
+
+                <div class="progress-header">
+
+                    <span>Votre progression</span>
+
+                    <strong id="progressText">0%</strong>
+
+                </div>
+
+                <div class="progress-track">
+                    <div id="progressBar"></div>
+                </div>
+
+                <p id="progressDescription">
+                    Commencez votre première leçon !
+                </p>
+
+            </div>
+
+
+            <!-- LISTE DES LEÇONS -->
+
+            <div class="lesson-menu">
+
+                <h3>VOTRE PARCOURS D'APPRENTISSAGE</h3>
+
+
+                <button class="lesson-item active" data-lesson="0">
+
+                    <span class="lesson-number">01</span>
+
+                    <span class="lesson-info">
+                        <strong>Introduction</strong>
+                        <small>Découvrir Python</small>
+                    </span>
+
+                    <span class="lesson-status">●</span>
+
+                </button>
+
+
+                <button class="lesson-item" data-lesson="1">
+
+                    <span class="lesson-number">02</span>
+
+                    <span class="lesson-info">
+                        <strong>Les variables</strong>
+                        <small>Stocker des informations</small>
+                    </span>
+
+                    <span class="lesson-status">○</span>
+
+                </button>
+
+
+                <button class="lesson-item" data-lesson="2">
+
+                    <span class="lesson-number">03</span>
+
+                    <span class="lesson-info">
+                        <strong>Les conditions</strong>
+                        <small>Prendre des décisions</small>
+                    </span>
+
+                    <span class="lesson-status">○</span>
+
+                </button>
+
+
+                <button class="lesson-item" data-lesson="3">
+
+                    <span class="lesson-number">04</span>
+
+                    <span class="lesson-info">
+                        <strong>Les boucles</strong>
+                        <small>Répéter des actions</small>
+                    </span>
+
+                    <span class="lesson-status">○</span>
+
+                </button>
+
+
+                <button class="lesson-item" data-lesson="4">
+
+                    <span class="lesson-number">05</span>
+
+                    <span class="lesson-info">
+                        <strong>Les fonctions</strong>
+                        <small>Réutiliser du code</small>
+                    </span>
+
+                    <span class="lesson-status">○</span>
+
+                </button>
+
+            </div>
+
+
+            <div class="sidebar-footer">
+                ✦ Apprendre en explorant
+            </div>
+
+        </aside>
+
+
+        <!-- MONDE 3D AU CENTRE -->
+
+        <section class="world-section">
+
+            <div class="world-heading">
+
+                <div>
+
+                    <span class="small-label">
+                        ENVIRONNEMENT INTERACTIF
+                    </span>
+
+                    <h2>Explorez le monde Python</h2>
+
+                    <p>
+                        Cliquez sur une station 3D pour découvrir une leçon.
+                    </p>
+
+                </div>
+
+                <button id="resetCamera" class="reset-button">
+                    ↻ Réinitialiser la vue
+                </button>
+
+            </div>
+
+
+            <div id="pythonWorld">
+
+                <div class="world-hint">
+                    🖱️ Faites glisser pour tourner · Faites défiler pour zoomer · Cliquez sur une station
+                </div>
+
+                <div class="world-loading" id="loadingMessage">
+
+                    <div class="loader"></div>
+
+                    <p>
+                        Préparation de votre monde Python...
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="world-bottom">
+
+                <span>✦ ENVIRONNEMENT D'APPRENTISSAGE 3D</span>
+
+                <span>PROPULSÉ PAR THREE.JS</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- PANNEAU DES LEÇONS À DROITE -->
+
+        <aside class="lesson-panel">
+
+            <div class="panel-top">
+
+                <span class="small-label">
+                    VOTRE LEÇON
+                </span>
+
+                <span class="lesson-counter" id="lessonCounter">
+                    01 / 05
+                </span>
+
+            </div>
+
+
+            <div class="lesson-icon" id="lessonIcon">
+                🐍
+            </div>
+
+
+            <span class="lesson-category" id="lessonCategory">
+                DÉCOUVRIR PYTHON
+            </span>
+
+
+            <h2 id="lessonTitle">
+                Introduction à Python
+            </h2>
+
+
+            <p class="lesson-description" id="lessonDescription">
+                Découvrez Python et comprenez les bases de la programmation.
+            </p>
+
+
+            <!-- EXPLICATION -->
+
+            <div class="explanation-box">
+
+                <h3>📘 Explication</h3>
+
+                <p id="lessonExplanation"></p>
+
+            </div>
+
+
+            <!-- EXEMPLE DE CODE -->
+
+            <div class="code-box">
+
+                <div class="code-header">
+
+                    <span>🐍 Exemple Python</span>
+
+                    <button id="copyCode">
+                        Copier
+                    </button>
+
+                </div>
+
+                <pre><code id="lessonCode"></code></pre>
+
+
+                <div class="code-output">
+
+                    <span>RÉSULTAT</span>
+
+                    <p id="lessonOutput"></p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONSEIL -->
+
+            <div class="tip-box">
+
+                <span>💡</span>
+
+                <p id="lessonTip"></p>
+
+            </div>
+
+
+            <!-- QUIZ -->
+
+            <div class="quiz-box">
+
+                <h3>🧠 Petit quiz</h3>
+
+                <p id="quizQuestion"></p>
+
+                <div id="quizOptions" class="quiz-options"></div>
+
+                <p id="quizFeedback" class="quiz-feedback"></p>
+
+            </div>
+
+
+            <!-- NAVIGATION -->
+
+            <div class="panel-navigation">
+
+                <button id="previousBtn" class="nav-button secondary">
+                    ← Précédent
+                </button>
+
+                <button id="nextBtn" class="nav-button primary">
+                    Leçon suivante →
+                </button>
+
+            </div>
+
+        </aside>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+        © 2026 IT WORLD 3D — APPRENDRE · EXPLORER · CRÉER
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script type="module" src="./python.js"></script>
+
+</body>
+</html>

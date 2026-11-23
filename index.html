@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IT WORLD 3D | Musée Technologique</title>
+
+    <link rel="stylesheet" href="museum.css">
+    
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <header class="museum-header">
+
+        <a href="index.html" class="logo">
+            IT <span>WORLD</span> 3D
+        </a>
+
+        <nav>
+            <a href="#museum">Musée</a>
+            <a href="#univers">Univers</a>
+            <a href="#about">À propos</a>
+            <a href="laboratory.html">Laboratoire 3D</a>
+            <a href="profile.html">Mon Profil</a>
+        </nav>
+
+        <div class="header-status">
+            <span class="status-dot"></span>
+            Musée ouvert
+        </div>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <main>
+
+        <section class="hero" id="museum">
+
+            <div class="hero-content">
+
+                <div class="eyebrow">
+                    <span>✦</span>
+                    BIENVENUE DANS LE FUTUR
+                </div>
+
+                <h1>
+                    EXPLOREZ<br>
+                    LE MONDE DE<br>
+                    <span>L'INFORMATIQUE</span>
+                </h1>
+
+                <p>
+                    Entrez dans un musée technologique interactif.
+                    Découvrez les secrets de l'informatique à travers
+                    six univers immersifs en trois dimensions.
+                </p>
+
+                <a href="#univers" class="start-button">
+                    Explorer le musée
+                    <span>→</span>
+                </a>
+
+                <div class="hero-info">
+                    <div>
+                        <strong>06</strong>
+                        <span>Univers</span>
+                    </div>
+
+                    <div>
+                        <strong>3D</strong>
+                        <span>Expérience immersive</span>
+                    </div>
+
+                    <div>
+                        <strong>∞</strong>
+                        <span>À découvrir</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 3D MUSEUM -->
+
+            <div class="museum-stage">
+
+                <div id="museum3d"></div>
+
+                <div class="scene-label">
+                    <span class="status-dot"></span>
+                    HALL PRINCIPAL
+                </div>
+
+                <div class="scene-hint">
+                    Explorez les portes du musée
+                </div>
+
+                <div class="scene-decoration decoration-one"></div>
+                <div class="scene-decoration decoration-two"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- UNIVERSES -->
+
+        <section class="univers-section" id="univers">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-tag">LES COLLECTIONS</span>
+
+                    <h2>Explorez nos univers</h2>
+
+                    <p>
+                        Choisissez une salle et commencez votre découverte.
+                    </p>
+                </div>
+
+                <span class="collection-count">06 COLLECTIONS</span>
+
+            </div>
+
+
+            <div class="universe-grid">
+
+                <a href="hardware.html" class="universe-card hardware-card">
+                    <span class="card-number">01</span>
+                    <span class="card-icon">💻</span>
+                    <h3>Hardware</h3>
+                    <p>Découvrez les composants physiques d'un ordinateur.</p>
+                    <span class="card-link">Entrer dans la salle →</span>
+                </a>
+
+                <a href="software.html" class="universe-card software-card">
+                    <span class="card-number">02</span>
+                    <span class="card-icon">🖥️</span>
+                    <h3>Software</h3>
+                    <p>Explorez les logiciels et les systèmes d'exploitation.</p>
+                    <span class="card-link">Entrer dans la salle →</span>
+                </a>
+
+                <a href="python.html" class="universe-card programming-card">
+                    <span class="card-number">03</span>
+                    <span class="card-icon">⌨️</span>
+                    <h3>Programming</h3>
+                    <p>Apprenez les bases de la programmation.</p>
+                    <span class="card-link">Entrer dans la salle →</span>
+                </a>
+
+                <a href="network.html" class="universe-card network-card">
+                    <span class="card-number">04</span>
+                    <span class="card-icon">🌐</span>
+                    <h3>Network</h3>
+                    <p>Comprenez les réseaux et les communications.</p>
+                    <span class="card-link">Entrer dans la salle →</span>
+                </a>
+
+                <a href="security.html" class="universe-card security-card">
+                    <span class="card-number">05</span>
+                    <span class="card-icon">🛡️</span>
+                    <h3>Cybersecurity</h3>
+                    <p>Découvrez les secrets de la sécurité informatique.</p>
+                    <span class="card-link">Entrer dans la salle →</span>
+                </a>
+
+                <a href="ai.html" class="universe-card ai-card">
+                    <span class="card-number">06</span>
+                    <span class="card-icon">🤖</span>
+                    <h3>Artificial Intelligence</h3>
+                    <p>Explorez le monde de l'intelligence artificielle.</p>
+                    <span class="card-link">Entrer dans la salle →</span>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+
+        <section class="about-section" id="about">
+
+            <span class="section-tag">NOTRE MISSION</span>
+
+            <h2>Apprendre autrement.</h2>
+
+            <p>
+                IT WORLD 3D transforme l'apprentissage de l'informatique
+                en une expérience interactive. Explorez, observez,
+                apprenez et testez vos connaissances.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        <span>IT WORLD 3D</span>
+        <p>© 2026 — Musée Technologique Interactif</p>
+    </footer>
+
+
+    <script type="module" src="museum.js"></script>
+
+</body>
+</html>
+

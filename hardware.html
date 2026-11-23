@@ -1,0 +1,216 @@
+
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Laboratoire du matériel | IT WORLD 3D</title>
+
+    <link rel="stylesheet" href="hardware.css">
+
+    <!-- THREE JS -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+</head>
+
+<body>
+
+<header class="header">
+
+    <a href="index.html" class="logo">
+        IT WORLD <span>3D</span>
+    </a>
+
+    <div class="header-actions">
+
+        <span class="lab-status">● LABORATOIRE EN LIGNE</span>
+
+        <a href="index.html" class="back">← Accueil</a>
+
+    </div>
+
+</header>
+
+<main>
+
+    <!-- INTRODUCTION -->
+
+    <section class="intro">
+
+        <span class="eyebrow" id="eyebrow">
+            MONDE 01 / INFORMATIQUE
+        </span>
+
+        <h1 id="mainTitle">
+            Découvrez le <span>matériel informatique</span>
+        </h1>
+
+        <p id="subtitle">
+            Explorez les composants internes d'un ordinateur en 3D.
+        </p>
+
+    </section>
+
+
+    <!-- LABORATOIRE 3D -->
+
+    <section class="lab">
+
+        <div class="scene-area">
+
+            <div class="scene-heading">
+
+                <span>MODÈLE INTERACTIF 3D</span>
+
+                <span>
+                    🖱️ Faites glisser pour tourner · Faites défiler pour zoomer
+                </span>
+
+            </div>
+
+
+            <div class="model-controls">
+
+                <button id="explodeBtn">
+                    ✦ Vue éclatée
+                </button>
+
+                <button id="assembleBtn">
+                    ↻ Assembler
+                </button>
+
+                <button id="caseBtn">
+                    ▣ Masquer le boîtier
+                </button>
+
+            </div>
+
+
+            <div id="hardware3d"></div>
+
+
+            <div class="scene-bottom">
+
+                <span>✦ EXPÉRIENCE INTERACTIVE DU MATÉRIEL</span>
+
+                <button id="resetCamera">
+                    ↻ Réinitialiser la vue
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PANNEAU D'INFORMATIONS -->
+
+        <aside class="info-panel">
+
+            <div class="info-top">
+
+                <span class="tag" id="componentTag">
+                    BIENVENUE
+                </span>
+
+                <span class="number" id="componentNumber">
+                    00 / 07
+                </span>
+
+            </div>
+
+
+            <div class="component-icon" id="componentIcon">
+                💻
+            </div>
+
+
+            <h2 id="componentName">
+                Matériel informatique
+            </h2>
+
+
+            <p class="definition" id="definition">
+                Sélectionnez un composant dans le modèle 3D pour découvrir son fonctionnement.
+            </p>
+
+
+            <div class="info-divider"></div>
+
+
+            <h3 id="roleTitle">
+                QUEL EST SON RÔLE ?
+            </h3>
+
+
+            <p id="roleDescription">
+                Un ordinateur est composé de plusieurs éléments qui fonctionnent ensemble.
+            </p>
+
+
+            <div class="fact" id="fact">
+                💡 Commencez par sélectionner la carte mère.
+            </div>
+
+
+            <div class="navigation">
+
+                <button id="previousBtn">
+                    ← Précédent
+                </button>
+
+                <button id="nextBtn">
+                    Suivant →
+                </button>
+
+            </div>
+
+        </aside>
+
+    </section>
+
+
+    <!-- LISTE DES COMPOSANTS -->
+
+    <section class="component-list">
+
+        <h2 id="listTitle">
+            Découvrez les composants
+        </h2>
+
+        <p id="listSubtitle">
+            Sélectionnez un composant pour en savoir plus.
+        </p>
+
+        <div class="components" id="componentsList"></div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        IT WORLD 3D © 2026
+
+        <span>APPRENDRE · EXPLORER · CRÉER</span>
+
+    </footer>
+
+</main>
+
+
+<!-- JAVASCRIPT -->
+
+<script type="module" src="./hardware.js"></script>
+
+</body>
+</html>

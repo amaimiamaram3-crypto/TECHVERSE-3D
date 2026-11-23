@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT WORLD 3D | Laboratoire</title>
+    <link rel="stylesheet" href="laboratory.css">
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+</head>
+<body>
+    <header class="lab-header">
+        <a href="index.html" class="logo">IT WORLD <span>3D</span></a>
+        <a href="index.html" class="back-link">← Retour au musée</a>
+    </header>
+
+    <main class="lab-layout">
+        <section class="lab-intro">
+            <span class="eyebrow">ESPACE D'APPRENTISSAGE INTERACTIF</span>
+            <h1>Laboratoire <span>Hardware 3D</span></h1>
+            <p>Explorez les composants d'un ordinateur et découvrez le rôle de chaque élément.</p>
+        </section>
+
+        <section class="lab-content">
+            <div class="scene-panel">
+                <div class="scene-top">
+                    <span>ORDINATEUR — VUE 3D</span>
+                    <div class="scene-buttons">
+    <button id="explodeBtn">Vue éclatée</button>
+    <button id="resetCamera">Réinitialiser la vue</button>
+</div>
+                </div>
+                <div id="laboratory3d"></div>
+                <div class="scene-help">🖱️ Faites glisser pour tourner · Molette pour zoomer · Cliquez sur un composant</div>
+            </div>
+
+            <aside class="info-panel">
+                <div class="info-tag">COMPOSANT SÉLECTIONNÉ</div>
+                <div id="componentIcon" class="component-icon">💻</div>
+                <h2 id="componentName">Bienvenue au laboratoire</h2>
+                <p id="componentDescription">
+                    Cliquez sur un composant de l'ordinateur pour découvrir son fonctionnement.
+                </p>
+
+                <div class="info-divider"></div>
+                <h3>À retenir</h3>
+                <p id="componentFact">Chaque composant joue un rôle essentiel dans le fonctionnement de l'ordinateur.</p>
+
+                <div class="lab-tip">
+                    <strong>Astuce</strong>
+                    <p>Vous pouvez faire tourner le modèle pour observer les composants sous différents angles.</p>
+                </div>
+            </aside>
+        </section>
+
+<section class="quiz-section">
+    <div class="quiz-heading">
+        <span>TESTEZ VOS CONNAISSANCES</span>
+        <h2>Quiz <strong>Hardware</strong></h2>
+        <p>Répondez aux questions et gagnez des points !</p>
+    </div>
+
+    <div class="quiz-card">
+        <div class="quiz-progress">
+            <span id="quizCounter">Question 1 / 6</span>
+            <span id="quizScore">Score : 0</span>
+        </div>
+
+        <div class="quiz-progress-track">
+            <div id="quizProgressBar"></div>
+        </div>
+
+        <h3 id="quizQuestion">Quel est le cerveau de l'ordinateur ?</h3>
+
+        <div id="quizAnswers" class="quiz-answers"></div>
+
+        <p id="quizFeedback" class="quiz-feedback"></p>
+
+        <button id="nextQuizBtn" disabled>
+            Question suivante →
+        </button>
+
+        <div id="quizResult" class="quiz-result" hidden>
+            <div class="result-icon">🏆</div>
+            <h3>Quiz terminé !</h3>
+            <p id="quizFinalScore"></p>
+            <button id="restartQuizBtn">Recommencer</button>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <script type="module" src="laboratory.js"></script>
+</body>
+</html>

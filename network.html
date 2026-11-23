@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réseaux et Internet 3D | IT WORLD</title>
+
+    <link rel="stylesheet" href="network.css">
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+
+    <script type="module" src="network.js"></script>
+</head>
+
+<body>
+    <header class="topbar">
+        <a href="index.html" class="logo">IT<span>WORLD</span> 3D</a>
+        <a href="index.html" class="back-link">← Accueil</a>
+    </header>
+
+    <main class="layout">
+        <aside class="sidebar">
+            <div class="welcome">
+                <span class="small-label">NIVEAU 02 · INFORMATIQUE</span>
+                <h1>Réseaux et Internet</h1>
+                <p>Découvrez comment les ordinateurs communiquent et partagent des informations.</p>
+            </div>
+
+            <div class="progress-section">
+                <div class="progress-heading">
+                    <strong>Votre progression</strong>
+                    <span id="progressText">0 / 6</span>
+                </div>
+                <div class="progress-track">
+                    <div id="progressBar"></div>
+                </div>
+                <p id="progressDescription">Commencez votre première leçon !</p>
+            </div>
+
+            <div class="lesson-menu">
+                <span class="menu-label">VOTRE PARCOURS</span>
+
+                <button class="lesson-item active" data-lesson="0">
+                    <span class="lesson-number">01</span>
+                    <span><strong>Le réseau informatique</strong><small>Comprendre un réseau</small></span>
+                </button>
+
+                <button class="lesson-item" data-lesson="1">
+                    <span class="lesson-number">02</span>
+                    <span><strong>Routeur et Switch</strong><small>Les équipements réseau</small></span>
+                </button>
+
+                <button class="lesson-item" data-lesson="2">
+                    <span class="lesson-number">03</span>
+                    <span><strong>L’adresse IP</strong><small>Identifier un appareil</small></span>
+                </button>
+
+                <button class="lesson-item" data-lesson="3">
+                    <span class="lesson-number">04</span>
+                    <span><strong>Serveur et Client</strong><small>Échanger des données</small></span>
+                </button>
+
+                <button class="lesson-item" data-lesson="4">
+                    <span class="lesson-number">05</span>
+                    <span><strong>Internet et Wi-Fi</strong><small>Se connecter au monde</small></span>
+                </button>
+
+                <button class="lesson-item" data-lesson="5">
+                    <span class="lesson-number">06</span>
+                    <span><strong>Câbles et connexions</strong><small>Relier les appareils</small></span>
+                </button>
+            </div>
+        </aside>
+
+        <section class="learning-area">
+            <div class="world-card">
+                <div class="world-heading">
+                    <div>
+                        <span class="small-label">ENVIRONNEMENT INTERACTIF</span>
+                        <h2>Explorez le monde des réseaux</h2>
+                    </div>
+                    <button id="resetCamera" class="reset-button">↻ Réinitialiser la vue</button>
+                </div>
+
+                <div id="networkWorld">
+                    <div id="loadingMessage">Préparation de votre monde 3D...</div>
+                </div>
+
+                <p class="world-help">Faites glisser pour tourner · Molette pour zoomer · Cliquez sur un élément pour explorer</p>
+            </div>
+
+            <section class="lesson-panel">
+                <div class="lesson-header">
+                    <div>
+                        <span class="small-label" id="lessonCategory">LEÇON 01</span>
+                        <h2 id="lessonTitle">Le réseau informatique</h2>
+                    </div>
+                    <span id="lessonIcon" class="lesson-icon">🌐</span>
+                </div>
+
+                <p id="lessonDescription" class="lesson-description"></p>
+
+                <div class="explanation-box">
+                    <h3>📘 Explication</h3>
+                    <p id="lessonExplanation"></p>
+                </div>
+
+                <div class="example-box">
+                    <h3>💡 Exemple pratique</h3>
+                    <p id="lessonExample"></p>
+                </div>
+
+                <div class="quiz-box">
+                    <h3>🧠 Petit quiz</h3>
+                    <p id="quizQuestion"></p>
+                    <div id="quizOptions" class="quiz-options"></div>
+                    <p id="quizFeedback" class="quiz-feedback"></p>
+                </div>
+
+                <div class="lesson-navigation">
+                    <button id="previousBtn" class="secondary-button">← Précédent</button>
+                    <button id="nextBtn" class="primary-button">Leçon suivante →</button>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer>IT WORLD 3D · APPRENDRE · EXPLORER · COMPRENDRE</footer>
+</body>
+</html>

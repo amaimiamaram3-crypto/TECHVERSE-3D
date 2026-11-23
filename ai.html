@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Académie IA | IT WORLD 3D</title>
+
+    <link rel="stylesheet" href="./ai.css">
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+</head>
+
+<body>
+
+<header class="topbar">
+    <a href="index.html" class="logo">IT<span>WORLD</span> 3D</a>
+    <a href="index.html" class="back-link">← Retour à l'accueil</a>
+</header>
+
+<main class="layout">
+
+    <aside class="sidebar">
+
+        <div class="welcome">
+            <span class="eyebrow">BIENVENUE DANS</span>
+            <h1>Académie <span>IA</span></h1>
+            <p>Découvrez l'intelligence artificielle grâce à un univers 3D interactif.</p>
+        </div>
+
+        <div class="progress-section">
+            <div class="progress-heading">
+                <span>Votre progression</span>
+                <strong id="progressText">0%</strong>
+            </div>
+
+            <div class="progress-track">
+                <div id="progressBar"></div>
+            </div>
+
+            <p id="progressDescription">Commencez votre première leçon !</p>
+        </div>
+
+        <div class="lesson-menu">
+            <h3>VOTRE PARCOURS</h3>
+
+            <button class="lesson-item active" data-lesson="0">
+                <span>01</span>
+                <div><strong>Introduction à l'IA</strong><small>Découvrir l'IA</small></div>
+            </button>
+
+            <button class="lesson-item" data-lesson="1">
+                <span>02</span>
+                <div><strong>Machine Learning</strong><small>Apprendre des données</small></div>
+            </button>
+
+            <button class="lesson-item" data-lesson="2">
+                <span>03</span>
+                <div><strong>Deep Learning</strong><small>Les réseaux neuronaux</small></div>
+            </button>
+
+            <button class="lesson-item" data-lesson="3">
+                <span>04</span>
+                <div><strong>Les données</strong><small>La base de l'IA</small></div>
+            </button>
+
+            <button class="lesson-item" data-lesson="4">
+                <span>05</span>
+                <div><strong>Applications de l'IA</strong><small>L'IA au quotidien</small></div>
+            </button>
+
+            <button class="lesson-item" data-lesson="5">
+                <span>06</span>
+                <div><strong>IA et éthique</strong><small>Utiliser l'IA avec soin</small></div>
+            </button>
+        </div>
+
+    </aside>
+
+    <section class="main-content">
+
+        <section class="world-card">
+            <div class="world-heading">
+                <div>
+                    <span class="eyebrow">ENVIRONNEMENT INTERACTIF</span>
+                    <h2>Explorez le monde de l'IA</h2>
+                </div>
+
+                <button id="resetCamera">⟳ Réinitialiser la vue</button>
+            </div>
+
+            <div id="aiWorld">
+                <div id="loadingMessage">Préparation de votre monde IA...</div>
+            </div>
+
+            <p class="world-instruction">
+                🖱️ Faites glisser pour tourner · Zoomez avec la molette · Cliquez sur une station
+            </p>
+        </section>
+
+        <section class="lesson-card">
+
+            <div class="lesson-header">
+                <span id="lessonCategory">LEÇON 01</span>
+                <span id="lessonIcon">🤖</span>
+            </div>
+
+            <h2 id="lessonTitle">Introduction à l'intelligence artificielle</h2>
+
+            <p id="lessonDescription">
+                Découvrez ce qu'est l'intelligence artificielle.
+            </p>
+
+            <div class="explanation-box">
+                <h3>📘 Explication</h3>
+                <p id="lessonExplanation"></p>
+            </div>
+
+            <div class="example-box">
+                <h3>💡 Exemple</h3>
+                <p id="lessonExample"></p>
+            </div>
+
+            <div class="quiz-box">
+                <h3>🧠 Petit quiz</h3>
+                <p id="quizQuestion"></p>
+                <div id="quizOptions"></div>
+                <p id="quizFeedback"></p>
+            </div>
+
+            <div class="lesson-navigation">
+                <button id="previousBtn">← Précédent</button>
+                <button id="nextBtn">Leçon suivante →</button>
+            </div>
+
+        </section>
+
+    </section>
+
+</main>
+
+<footer>IT WORLD 3D © 2026 · APPRENDRE · EXPLORER · INNOVER</footer>
+
+<script type="module" src="./ai.js"></script>
+
+</body>
+</html>

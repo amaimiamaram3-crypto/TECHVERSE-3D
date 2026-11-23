@@ -1,0 +1,401 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cairo:wght@400;600;700;800&display=swap');
+
+:root {
+    --bg: #080817;
+    --purple: #9565ff;
+    --blue: #40c8ff;
+    --text: #f5f2ff;
+    --muted: #aaa6c4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(ellipse at 50% 35%, #211344, #0b0a20 60%, #070712);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+}
+
+.header {
+    height: 75px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ffffff15;
+}
+
+.logo {
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--purple);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.lab-status {
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: #55e7b0;
+}
+
+#languageBtn, .back {
+    background: #ffffff10;
+    color: white;
+    border: 1px solid #ffffff25;
+    border-radius: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.intro {
+    text-align: center;
+    padding: 45px 15px 35px;
+}
+
+.eyebrow {
+    color: #a98aff;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+h1 {
+    font-size: clamp(28px, 4vw, 43px);
+    margin: 15px 0;
+}
+
+h1 span {
+    color: #a77aff;
+}
+
+.intro p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.lab {
+    max-width: 1250px;
+    padding: 0 20px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.8fr);
+    gap: 20px;
+}
+
+.scene-area, .info-panel {
+    background: #ffffff08;
+    border: 1px solid #ffffff18;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.scene-area {
+    min-width: 0;
+}
+
+.scene-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 17px 20px;
+    color: #aaa2c9;
+    font-size: 9px;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #ffffff12;
+}
+
+#hardware3d {
+    width: 100%;
+    height: 440px;
+    cursor: grab;
+}
+
+#hardware3d:active {
+    cursor: grabbing;
+}
+
+#hardware3d canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.scene-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    border-top: 1px solid #ffffff12;
+    font-size: 9px;
+    color: #9b8fbd;
+}
+
+#resetCamera {
+    background: #9869ff20;
+    border: 1px solid #9869ff55;
+    color: white;
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.info-panel {
+    padding: 23px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tag {
+    color: #ae8aff;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.number {
+    color: #77718f;
+    font-size: 11px;
+}
+
+.component-icon {
+    margin: 30px 0 15px;
+    width: 65px;
+    height: 65px;
+    display: grid;
+    place-items: center;
+    background: #9665ff20;
+    border: 1px solid #9665ff55;
+    border-radius: 16px;
+    font-size: 32px;
+}
+
+.info-panel h2 {
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.info-panel p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.info-divider {
+    border-top: 1px solid #ffffff18;
+    margin: 24px 0;
+}
+
+.info-panel h3 {
+    color: #b493ff;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.fact {
+    margin-top: 20px;
+    background: #9768ff16;
+    border: 1px solid #9768ff35;
+    padding: 14px;
+    border-radius: 12px;
+    color: #d3c3ff;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.navigation {
+    margin-top: auto;
+    padding-top: 25px;
+    display: flex;
+    gap: 10px;
+}
+
+.navigation button {
+    flex: 1;
+    background: #9162f8;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    padding: 12px 8px;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+.navigation button:hover {
+    background: #7548d4;
+}
+
+.component-list {
+    max-width: 1210px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.component-list h2 {
+    font-size: 22px;
+}
+
+.component-list > p {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 8px;
+}
+
+.components {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 13px;
+    margin-top: 22px;
+}
+
+.component-card {
+    background: #ffffff09;
+    border: 1px solid #ffffff18;
+    color: white;
+    border-radius: 12px;
+    padding: 17px;
+    text-align: left;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.component-card:hover, .component-card.active {
+    background: #9462ff22;
+    border-color: #a17aff;
+    transform: translateY(-3px);
+}
+
+.component-card span {
+    display: block;
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.component-card strong {
+    font-size: 12px;
+}
+
+.component-card small {
+    display: block;
+    color: var(--muted);
+    margin-top: 6px;
+    font-size: 10px;
+}
+
+footer {
+    border-top: 1px solid #ffffff15;
+    padding: 23px 7%;
+    display: flex;
+    justify-content: space-between;
+    color: #77718f;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+body[dir="rtl"] {
+    font-family: 'Cairo', sans-serif;
+}
+
+body[dir="rtl"] .component-card {
+    text-align: right;
+}
+
+@media(max-width: 850px) {
+    .lab {
+        grid-template-columns: 1fr;
+    }
+
+    .components {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .info-panel {
+        min-height: 400px;
+    }
+}
+
+@media(max-width: 500px) {
+    .header {
+        padding: 0 4%;
+    }
+
+    .lab-status {
+        display: none;
+    }
+
+    .scene-heading {
+        font-size: 8px;
+    }
+
+    #hardware3d {
+        height: 350px;
+    }
+
+    footer {
+        gap: 10px;
+        font-size: 8px;
+    }
+}
+.model-controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 18px 0;
+}
+
+.model-controls button {
+    padding: 12px 20px;
+    border: 1px solid rgba(160, 120, 255, 0.4);
+    border-radius: 12px;
+    background: #21183b;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.model-controls button:hover {
+    background: #7045b5;
+    transform: translateY(-3px);
+}
+
+.model-controls button:active {
+    transform: scale(0.96);
+}
+
+#hardware3d {
+    width: 100%;
+    height: 550px;
+    min-height: 400px;
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+#hardware3d canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    touch-action: none;
+}

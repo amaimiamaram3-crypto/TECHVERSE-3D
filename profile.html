@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT WORLD 3D | Mon Profil</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+    <header class="profile-header">
+        <a href="index.html" class="logo">IT WORLD <span>3D</span></a>
+        <a href="index.html" class="back-link">← Retour au musée</a>
+    </header>
+
+    <main class="profile-container">
+
+        <section class="welcome">
+            <span class="eyebrow">ESPACE PERSONNEL</span>
+            <h1>Mon <span>Profil</span></h1>
+            <p>Suivez votre progression et découvrez vos réussites.</p>
+        </section>
+
+        <section class="profile-card">
+
+            <div class="avatar">👨‍💻</div>
+
+            <div class="user-info">
+                <h2 id="userName">Apprenant</h2>
+                <p>Explorateur IT WORLD 3D</p>
+                <span id="userLevel" class="level">Débutant</span>
+            </div>
+
+            <button id="editNameBtn">Modifier mon nom</button>
+
+        </section>
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <div class="stat-icon">⭐</div>
+                <span>Points obtenus</span>
+                <strong id="totalPoints">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">📚</div>
+                <span>Quiz terminés</span>
+                <strong id="quizCompleted">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">🏆</div>
+                <span>Meilleur score</span>
+                <strong id="bestScore">0 / 60</strong>
+            </div>
+
+        </section>
+
+        <section class="progress-section">
+
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">VOTRE APPRENTISSAGE</span>
+                    <h2>Ma progression</h2>
+                </div>
+                <strong id="progressPercent">0%</strong>
+            </div>
+
+            <div class="progress-track">
+                <div id="progressBar"></div>
+            </div>
+
+            <p id="progressMessage">
+                Terminez votre premier quiz pour commencer votre progression.
+            </p>
+
+        </section>
+
+        <section class="achievements-section">
+
+            <span class="eyebrow">VOS RÉUSSITES</span>
+            <h2>Mes badges</h2>
+
+            <div class="badges-grid">
+
+                <div class="achievement" id="badgeBeginner">
+                    <div>🌱</div>
+                    <strong>Débutant</strong>
+                    <p>Premier pas dans l'informatique</p>
+                </div>
+
+                <div class="achievement locked" id="badgeHardware">
+                    <div>💻</div>
+                    <strong>Expert Hardware</strong>
+                    <p>Obtenir 60 points au quiz</p>
+                </div>
+
+                <div class="achievement locked" id="badgePerfect">
+                    <div>🏅</div>
+                    <strong>Excellent</strong>
+                    <p>Obtenir un score parfait</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <button id="resetProfileBtn" class="reset-button">
+            Réinitialiser mes statistiques
+        </button>
+
+    </main>
+
+    <script src="profile.js"></script>
+</body>
+</html>
